@@ -7,7 +7,7 @@
 
 .quiz-card {
     display: flex;
-    background-color: rgb(18, 2, 70);
+    background-color: #23087b;
     padding-right: 20px;
     color: white;
     border-radius: 8px;
@@ -22,5 +22,5 @@
 
 .card-btn {
     margin-left: 20px;
-    padding: 5px 15px;
+    padding: 5px 10px;
 }

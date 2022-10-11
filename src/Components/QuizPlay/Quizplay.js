@@ -7,7 +7,7 @@ const QuizPlay = () => {
     const quizes = useLoaderData().data
     console.log(quizes)
     return (
-        <div className='display-question'>
+        <div>
             {
                 quizes.questions.map(quiz => <Quiz
                     key={quiz.id}

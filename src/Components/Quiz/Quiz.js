@@ -1,4 +1,5 @@
 import React from 'react';
+import './Quiz.css';
 
 const Quiz = ({ quiz, option }) => {
     const { question, options } = quiz;
@@ -6,13 +7,16 @@ const Quiz = ({ quiz, option }) => {
 
     return (
         <div>
-            <form action="/action_page.php">
-                <p className='text-2xl bold'>{question}</p>
-                <input type="radio" name="fav_language" />
-                <label>{options}</label>
+            <div className='display-question m-4 rounded-lg p-6 '>
+                <form action="/action_page.php">
+                    <h2 className='text-2xl bold text-center mb-5 font-bold'>{question.slice(3, -4)}</h2>
 
+                    <div className='text-center options-bar'>
+                        <div>{options}</div>
+                    </div>
+                </form>
+            </div>
 
-            </form>
             {/* <h1>{question}</h1>
             <ul><ol>{options}</ol></ul> */}
         </div>
