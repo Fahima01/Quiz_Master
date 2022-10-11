@@ -1,12 +1,20 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
 
-const Quiz = () => {
-    const quizes = useLoaderData().data
-    console.log(quizes)
+const Quiz = ({ quiz, option }) => {
+    const { question, options } = quiz;
+
+
     return (
         <div>
-            <h2 className='text-4xl'>This is Quiz: {quizes.length}</h2>
+            <form action="/action_page.php">
+                <p className='text-2xl bold'>{question}</p>
+                <input type="radio" name="fav_language" />
+                <label>{options}</label>
+
+
+            </form>
+            {/* <h1>{question}</h1>
+            <ul><ol>{options}</ol></ul> */}
         </div>
     );
 };
