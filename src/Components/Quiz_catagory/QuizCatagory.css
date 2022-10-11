@@ -1,0 +1,26 @@
+.quiz-card img {
+    width: 150px;
+    height: 200px;
+    background-color: rgb(21, 152, 223);
+    border-radius: 8px;
+}
+
+.quiz-card {
+    display: flex;
+    background-color: rgb(18, 2, 70);
+    padding-right: 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+.quiz-card-details h2 {
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-btn {
+    margin-left: 20px;
+    padding: 5px 15px;
+}

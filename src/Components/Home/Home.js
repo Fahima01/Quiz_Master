@@ -1,7 +1,9 @@
+import { data } from 'autoprefixer';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import './Home.css'
-import image from './images/header.png'
+import QuizCatagory from '../Quiz_catagory/Quiz_catagory';
+import './Home.css';
+import image from './images/header.png';
 
 
 const Home = () => {
@@ -9,12 +11,28 @@ const Home = () => {
     console.log(selectQuiz)
 
     return (
-        <div className='bg-blue-50 home-container'>
-            <div>
-                <h1>Quiz catagory : {selectQuiz.length}</h1>
-            </div>
+        <div>
+            <img className='header-img' src={image} alt="" />
+            <div className='bg-blue-50 home-container'>
 
+                <div>
+
+                    <div className='catagory-container' >
+                        {
+                            selectQuiz.map(quiz => <QuizCatagory
+                                key={quiz.id}
+                                quiz={quiz}
+
+                            ></QuizCatagory>)
+                        }
+                    </div>
+
+                </div>
+
+
+            </div>
         </div>
+
     );
 };
 

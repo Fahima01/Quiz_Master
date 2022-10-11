@@ -1,12 +1,21 @@
 .home-container {
-    height: auto;
+    height: 50vh;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     display: flex;
 }
 
-.home-container img {
-    width: 1200px;
-    height: 400px;
+
+.catagory-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.header-img {
+    height: 300px;
+    width: 900px;
+    margin: auto;
 
 }

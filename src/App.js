@@ -22,7 +22,10 @@ function App() {
         },
         {
           path: '/quiz',
-          element: <Quiz></Quiz>
+          element: <Quiz></Quiz>,
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${[1]}`)
+          }
         },
         {
           path: '/blog',
@@ -32,7 +35,7 @@ function App() {
     },
   ]);
   return (
-    <div className="App">
+    <div >
       <RouterProvider router={router} />
 
     </div>
