@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import Blog from './Components/Blog/Blog';
 import { QuizQuestionLoaderArray } from './Components/loaders/GetQuestionArray';
 import QuizPlay from './Components/QuizPlay/Quizplay';
+import ErrorMessege from './Components/404_Error/ErrorMessege';
 
 function App() {
   const router = createBrowserRouter([
@@ -22,9 +23,13 @@ function App() {
           },
         },
         {
-          path: '/quiz',
+          path: '/quiz/:quizId',
+          loader: async ({ params }) => {
+            //console.log(params.quizId)
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
           element: <QuizPlay></QuizPlay>,
-          loader: QuizQuestionLoaderArray,
+
         },
 
         {
@@ -33,6 +38,9 @@ function App() {
         }
       ]
     },
+    {
+      path: '*', element: <ErrorMessege></ErrorMessege>
+    }
   ]);
   return (
     <div >

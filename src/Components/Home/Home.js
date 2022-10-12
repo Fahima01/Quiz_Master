@@ -8,7 +8,7 @@ import image from './images/header.png';
 
 const Home = () => {
     const selectQuiz = useLoaderData().data
-    console.log(selectQuiz)
+    //console.log(selectQuiz)
 
     return (
         <div>
