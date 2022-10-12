@@ -1,14 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Option from '../Options/Option';
 import Quiz from '../Quiz/Quiz';
 
 const Quizplay = () => {
     const quizPlay = useLoaderData().data
-    console.log(quizPlay)
+    //console.log(quizPlay)
     return (
         <div>
-            <h1>THis is quizPlay page</h1>
-            <h1>Quiz name {quizPlay.name}</h1>
+
+            <h1 className='text-3xl font-semibold py-6 text-center text-fuchsia-700 drop-shadow'>Quiz name {quizPlay.name}</h1>
             <div>
                 {
                     quizPlay.questions.map(quiz => <Quiz
@@ -21,16 +22,7 @@ const Quizplay = () => {
                 }
             </div>
             <div>
-                {/* {
-                    quizPlay.questions.options.map(option => <Quiz
 
-                        option={option}
-                    ></Quiz>
-
-
-                    )
-
-                } */}
             </div>
 
         </div>
